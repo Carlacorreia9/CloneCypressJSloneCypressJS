@@ -1,0 +1,33 @@
+# Node modules (não versionar pacotes instalados)
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Configuração do ambiente
+.env
+.env.local
+.env.*.local
+
+# Arquivos de build temporários
+dist/
+build/
+coverage/
+.cypress-coverage/
+
+# Cypress
+cypress/videos/
+cypress/screenshots/
+
+# VSCode settings (opcional)
+.vscode/
+
+# Arquivos de cache
+.cache/
+*.log

@@ -88,9 +88,46 @@ context('Validação de Elementos na Página Inicial',()=>{  // context cria um 
 // Cadastrar Usuario ação para cadastrar um novo usuario
 context('Cadastrando Usuario',()=>{
 
+    it('Cadastrar Usuario',()=>{
+
     cy.get('input[id=txtNome]')
         .click().type('Cypress').should('have.value', 'Cypress');
     cy.log('Nome digitado');
+
+    cy.get('input[id=numero]')
+        .click().type('18').should('have.value', '18');
+    cy.log('Idade digitada');
+
+    cy.get('input[type="data"]')
+        .click().type('2000-01-01').should('have.value', '2000-01-01');
+    cy.log('Data digitada');
+
+    cy.get('input[id="rdMasculino"]')
+        .should('have.value', 'male').should('be.visible').click();
+    cy.log('Sexo digitado');
+
+    cy.get('input[id="email"]')
+        .click().type('cypress@qa.com').should('have.value', 'cypress@qa.com');
+    cy.log('Email digitado');
+
+    cy.get('input[id="senha"]')
+        .click().type('123456').should('have.value', '123456');
+    cy.log('Senha digitada');
+
+    cy.get('input[id="telefone"]')
+        .click().type('1234567890').should('have.value', '1234567890');
+    cy.log('Telefone digitado');
+
+    cy.get('input[id="btnCadastrarSalvar"]')
+        .should('be.visible').should('have.value', 'Cadastrar').click();
+    cy.log('Botão Salvar Vísivel');
+
+    cy.get('button[onclick="excluir()"]')
+        .should('be.visible').should('have.value', 'Excluir').click();
+    cy.log('Botão Excluir Vísivel');
+
+
+    })
 
 
 })
